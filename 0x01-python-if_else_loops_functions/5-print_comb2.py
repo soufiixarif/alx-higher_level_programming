@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 for nb in range(0, 100):
-    print(str(nb).zfill(2), end="")
     if nb != 99:
-        print(", ", end="")
+        print("{:02d}, ".format(nb), end="")
+    else:
+        print("{:02d}".format(nb))
