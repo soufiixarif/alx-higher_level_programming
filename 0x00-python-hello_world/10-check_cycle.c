@@ -10,8 +10,10 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *tmp;
+	listint_t *ptr;
 
 	tmp = list;
+	ptr = list;
 	if (!list)
 		return (0);
 	while (tmp)
@@ -19,7 +21,7 @@ int check_cycle(listint_t *list)
 		tmp = tmp->next;
 		if (tmp == NULL)
 			return (0);
-		else if (tmp == list)
+		else if (tmp == ptr)
 			return (1);
 	}
 	return (0);
